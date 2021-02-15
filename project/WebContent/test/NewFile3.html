@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    .outer {
+      width:300px;
+      height:35px;
+      border:1px solid #aaaaaa;
+      margin-top:12px;
+    }
+    .icon {
+      width:35px;
+      height:35px;
+      float:left;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#eeeeee;
+      border-right:1px solid #aaaaaa;
+    }
+    .input {
+      width:240px;
+      height:30px;
+      font-size:15px;
+      border:none;
+      float:right;
+    }
+    
+    #btn{
+    	width:300px;
+    	height:35x;
+    	margin-top:20px;
+    	background:#0074e9;
+    	border:1px solid #0074e9;
+    	color:white;
+    	font-weight:900;
+    	display:flex;
+    	align-items:center;
+        justify-content:center;
+    	
+    }
+    
+    .aa {
+      width:240px;
+      height:30px;
+      color:red;
+      font-size:15px;
+      border:none;
+      float:right;
+    }
+ </style>
+<script>
+	function check(){
+		if(document.pkc.id.value==""){
+			document.getElementById("id2").style.display="inline";
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="pkc" method="post" action="a.jsp" onSubmit="return check()">
+		<div class="outer"> <!-- id -->
+			<div class="icon">%</div>
+			<input type="text" class="input" placeholder="아이디(이메일)" name="id">
+			<div id="id2" style="display:none;" class="aa">아이디를 입력해주세요</div>
+		</div>
+		<div class="outer"> <!-- pwd -->
+			<div class="icon">%</div>
+			<input type="text" class="input" placeholder="비밀번호">
+		</div>
+		<div class="outer"> <!-- pwd확인 -->
+			<div class="icon">%</div>
+			<input type="text" class="input" placeholder="비밀번호확인">
+		</div>
+		
+		<div class="outer"> <!-- 이름-->
+			<div class="icon">%</div>
+			<input type="text" class="input" placeholder="이름">
+		</div>
+		
+		<div class="outer"> <!-- 휴대폰 번호-->
+			<div class="icon">%</div>
+			<input type="text" class="input" placeholder="휴대폰 번호">
+		</div>
+		
+		<!--  <div id="btn"> 동의하고 가입하기 </div>  -->
+		<input type="submit" value="동의하고 가입하기" id="btn">
+	</form>
+</body>
+</html>

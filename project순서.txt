@@ -1,0 +1,179 @@
+*project작업
+create database gettum;
+use gettum;
+
+member회원
+create table member(
+id varchar2(12) not null primary key,
+passwd varchar2(12) not null,
+name varchar2(20) not null,
+email varchar2(30),
+zipcode varchar2(7),
+addr varchar2(50),
+regdate date default sysdate not null 
+);
+
+product상품
+--------oracle---------
+create sequence product_seq
+ INCREMENT BY 1
+ START WITH 1
+ MINVALUE 1;
+
+create table product(
+pro_no number(5) not null primary key,
+code varchar2(10) not null,
+name varchar2(20) not null,
+price number(5) not null,
+stock number(5),
+detail varchar2(4000),
+regdate date default sysdate,
+image varchar2(30)
+);
+
+ insert into product(pro_no,code,name,price,stock,detail,regdate,image) values(product_seq.NEXTVAL,'tum1','stone',23900,80,'supporting your lifestyle',sysdate,'a1.jpg');
+
+ insert into product(pro_no,code,name,price,stock,detail,regdate,image) values(product_seq.NEXTVAL,'tum2','mava',23900,100,'supporting your lifestyle',sysdate,'a2.jpg');
+ 
+ 
+insert into product(pro_no,code,name,price,stock,detail,regdate,image) values(product_seq.NEXTVAL,'tum3','beige',24900,90,'supporting your lifestyle',sysdate,'b1.jpg');
+
+ insert into product(pro_no,code,name,price,stock,detail,regdate,image) values(product_seq.NEXTVAL,'tum4','bronze',24900,90,'supporting your lifestyle',sysdate,'b2.jpg');
+ 
+ 
+insert into product(pro_no,code,name,price,stock,detail,regdate,image) values(product_seq.NEXTVAL,'tum5','bloom',23900,80,'supporting your lifestyle',sysdate,'c1.jpg');
+
+ insert into product(pro_no,code,name,price,stock,detail,regdate,image) values(product_seq.NEXTVAL,'tum6','ginkgo',23900,100,'supporting your lifestyle',sysdate,'c2.jpg');
+ 
+ insert into product(pro_no,code,name,price,stock,detail,regdate,image) values(product_seq.NEXTVAL,'tum7','crystalp',33900,80,'supporting your lifestyle',sysdate,'d1.jpg');
+
+ insert into product(pro_no,code,name,price,stock,detail,regdate,image) values(product_seq.NEXTVAL,'tum8','crystalw',33900,100,'supporting your lifestyle',sysdate,'d2.jpg');
+ commit;
+
+order 주문
+--------oracle---------
+create sequence order_seq
+ INCREMENT BY 1
+ START WITH 1
+ MINVALUE 1;
+
+create table g_order(
+ordno number(5) not null primary key,
+pro_no number(5) references product(pro_no)  not null,
+quantity varchar2(10) not null,
+orddate   date default sysdate,
+state varchar2(10),
+m_id varchar2(10) references member(id)
+);
+
+order_seq.nextval
+
+====mysql=========================
+create table shop_order(
+ordno int(5) not null auto_increment,
+pro_no int(5)  not null,
+quantity varchar(10) not null,
+orddate   datetime,
+state varchar(10),
+userid varchar(10),
+primary key (ordno)
+);
+
+
+
+
+=========================================
+create sequence notice_seq
+ INCREMENT BY 1
+ START WITH 1
+ MINVALUE 1;
+
+
+create table notice(
+num number(4)  primary key,
+writer varchar2(10) not null,
+subject varchar2(50) not null,
+passwd varchar2(12) not null,
+regdate date,
+readcount number(4) default 0,
+ref number(4) not null,
+re_step number(4) not null,
+re_level number(4) not null,
+content  varchar2(4000) not null,
+ip varchar2(20)
+);
+
+============ 
+Admin
+============
+create table admin(
+  admin_id varchar(20)  primary key,
+  admin_pwd varchar(20) not null
+);
+
+insert into admin values('admin','1234');
+
+
+=========================================
+create sequence review_seq
+ INCREMENT BY 1
+ START WITH 1
+ MINVALUE 1;
+
+
+create table review(
+m_num number(4)  primary key,
+id varchar2(12) references member(id),
+m_subject varchar2(50) not null,
+m_passwd varchar2(12) not null,
+m_regdate date,
+m_readcount number(4) default 0,
+m_ref number(4) not null,
+m_re_step number(4) not null,
+m_re_level number(4) not null,
+m_content  varchar2(4000) not null,
+m_ip varchar2(20),
+m_img  varchar2(30)
+);
+
+
+
+
+https://www.behance.net/
+
+grant resource,connect
+to DB502;
+
+
+●상세보기, 카트, 주문,주문상세보기->jstl로 바꾸기(상세보기오류)
+
+●베스트,신상품 나오게 하기
+	-베스트:stock이용해서? 주문수이용해서?
+	-신상품:sysdate-7<일때 
+
+●구매페이지,디자인
+
+●후기게시판 만들기
+
+●관리자모드 만들기?
+
+●카트로그인 전 들어가기 오류
+
+●검색페이지만들기-게시판,상품
+
+●배송비 추가여부
+
+●admin-notice가능
+
+Google Tag Manager
+
+네이버 프리미엄 로그 분석
+
+new,best 구별-stock,sysdate이용
+
+
+이용색상
+
+#EBAAA7
+
+F6EAEB

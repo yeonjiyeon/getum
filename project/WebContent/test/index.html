@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+ <style>
+  body {
+    margin:0px;
+  }
+  #first { /* 1층 */
+    width:100%;
+    height:40px;
+    margin:auto;
+    background:#5f0080; /* 배경색 */
+    display:flex;
+    justify-content:center;  /* #main을 중앙정렬*/
+    position:relative;
+  }
+  #first #main {
+    width:1200px;
+    height:40px;
+  }
+  #first #left {
+    width:1170px;
+    height:38px;
+    float:left;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  #first #right {
+    width:20px;
+    height:38px;
+    float:right;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+  }
+  #second { /* 2층 */
+    width:1200px;
+    height:40px;
+    margin:auto;
+    padding-top:10px;
+   }
+  #second #left {
+    width:220px;
+    height:25px;
+    border:1px solid gray;
+    border-radius:10px;
+    float:left;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  #second #right {
+    width:430px;
+    height:25px;
+    float:right;
+    display:flex;
+   	align-items:center;
+   	justify-content:center;
+  }
+  
+  #second #right li {
+  	list-style-type:none;
+  	float:left;
+  	width:90px;
+  	height:30px;
+  }
+  
+   #second #right li:last-child {
+   	width:110px;
+   }
+   
+   #second #right li:nth-child(2) {
+   	border-left:1px solid gray;
+   }
+   
+   #second #right li:nth-child(3) {
+   	border-left:1px solid gray;
+   }
+   
+   #second #right li:nth-child(4) {
+   	border-left:1px solid gray;
+   }
+  
+  #second #right #sub {
+  	width:120px;
+  	height:150px;
+  	border:1px solid gray;
+  	padding-left:3px;
+  	background:white;
+  	position:relative;
+  	z-index:100;/*그림 두개가 겹칠때 뒤에 것이 올라가게 한다*/
+  	margin-top;10px;
+  	display:none;
+  }
+  
+   #second #right #sub li {
+   	width:120px;
+   	border:none;
+   }
+  
+  #third { /* 3층 */
+    width:1200px;
+    height:70px;
+    margin:auto;
+    display:flex;
+   	align-items:center;
+   	justify-content:center;
+  }
+  #fourth { /* 4층 */
+    width:1200px;
+    height:60px;
+	margin:auto;
+  }
+  #fourth li {
+    list-style-type:none;
+    float:left;
+    width:160px;
+    height:50px;
+  }
+  #fifth { /* 5층 */
+    width:1200px;
+   	height:400px;
+	margin:auto;
+  }
+ </style>
+ <script>
+   var h=40; // first의 높이
+   var a=0;
+   function hide(){
+	  if(h>0)  
+	 {	 
+	   h--;
+	   document.getElementById("first").style.height=h+"px";
+	   // document.getElementById("first").style.display="none";
+	   setTimeout(hide,10);
+	 }
+	 else
+	   document.getElementById("first").display="none"; 
+
+  	/* if(a > (-40)) {   
+		 a--;
+		 console.log(a);
+		 document.getElementById("first").style.top=a+"px";
+		 setTimeout(hide,10);
+	 }	  */
+   }
+   
+   var chk=0;
+   function baesong()
+   {
+	   var a="수도권 이외 지역 택배배송 >";
+	   var b="서울.경기.인천 샛별배송 >";
+	   
+	   if(chk%2 == 0) {// 짝수
+	     document.getElementsByClassName("bae")[0].innerText=a;
+	   }else {// 홀수
+	     document.getElementsByClassName("bae")[0].innerText=b;
+	   }
+	   
+	   chk++;
+	   
+	   setTimeout(baesong,2000);
+   }
+   
+   function view_sub(){
+	   document.getElementById("sub").style.display="inline-block";
+   }
+   
+   function hide_sub(){
+	   document.getElementById("sub").style.display="none";
+   }
+ </script>
+</head>
+<body onload="baesong()"> <!-- 전체 레이아웃 만들어보기 -->
+  <!-- 1층 -->
+  <div id="first">
+   <div id="main">
+    <div id="left"> 지금 가입하고 인기상품 100원에 받아가세요! &gt; </div> <!-- &lt;: < -&gt;:'>' -->
+    <div id="right" onclick="hide()"> X </div>
+   </div>
+  </div>
+  
+  <!-- 2층 -->
+  <div id="second">
+    <div id="left" class="bae"> 수도권 이외 지역 택배배송 &gt; </div>
+    <div id="right">
+     <ul>
+     <li>회원관리</li>
+     <li>로그인</li>
+     <li onmouseover="view_sub()" onmouseout="hide_sub()">고객센터▼
+     	<ul id="sub">
+     		<li>공지사항</li>
+     		<li>자주하는 질문</li>
+     		<li>1:1 문의</li>
+     		<li>상품제안</li>
+     		<li>에코포장 피드백</li>
+     	</ul>
+     </li>
+     <li>배송지역</li>
+     </ul>
+    </div>
+  </div>
+  
+  <!-- 3층 -->
+  <div id="third"> <img src="logo.png" width="100">  </div>
+  
+  <!-- 4층 -->
+  <div id="fourth">
+    <ul>
+      <li> 전체 카테고리 </li>
+      <li> 신상품 </li>
+      <li> 베스트 </li>
+      <li> 알뜰쇼핑 </li>
+      <li> 이벤트 </li>
+      <li> 검색창 </li>
+      <li> <img src="cart.png"> </li>
+    </ul>
+  </div>
+  
+  <!-- 5층 -->
+  <div id="fifth"> <img src="5.png" width=1198></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
