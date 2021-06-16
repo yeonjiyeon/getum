@@ -1,7 +1,7 @@
 # font:
 ### HTML, CSS, JavaSript, jQuery
 # back:
-### JSP/Servlets
+### JSP/Servlet
 # database:
 ### oracle
 
