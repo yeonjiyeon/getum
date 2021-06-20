@@ -10,7 +10,8 @@
 
 
 <br/>
-<img src="/exerd.PNG" width="450px" height="300px" title="px(픽셀) 크기 설정"></img><br/>
+<br/>
+<img src="/exerd.PNG" width="500px" height="600px"></img><br/>
 
 #### <느낀점>
 #### 시간분배의 중요성을 느꼈다. 정해진 시간안에 프로젝트를 맞추려면 골고루 시간 관리를 잘 해야 할 것 같다는 생각이 들었다. 
