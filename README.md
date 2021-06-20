@@ -1,10 +1,12 @@
 # _getum_
 #### jsp로 구현한 텀블러판매 사이트입니다.
+<br/>
 #### <프로젝트 정보>
 #### -font: HTML, CSS, JavaSript, jQuery
 #### -back: JSP/Servlet
 #### -database: oracle
 <br/>
+<img src="/img.jpg" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
 
 #### <느낀점>
 #### 시간분배의 중요성을 느꼈다. 정해진 시간안에 프로젝트를 맞추려면 골고루 시간 관리를 잘 해야 할 것 같다는 생각이 들었다. 
