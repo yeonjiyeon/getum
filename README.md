@@ -5,4 +5,8 @@
 #### -back: JSP/Servlet
 #### -database: oracle
 
+#### <느낀점>
+
+#### <좀 더 발전시키고 싶은 부분>
+
 
