@@ -26,5 +26,6 @@
 
 ## 3. ERD 설계
 ![캡처](https://user-images.githubusercontent.com/69364279/152396415-023e6eb2-fdd9-429e-8c27-ff4a8f7e1171.PNG)
+https://www.erdcloud.com/d/MDhfb2Mioq6sPRoiG
 
 
