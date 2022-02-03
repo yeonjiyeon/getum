@@ -1,6 +1,6 @@
 # :pushpin: getum
 >텀블러 판매 사이트  
->https://go-quality.dev  
+>
 
 </br>
 
