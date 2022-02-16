@@ -18,9 +18,7 @@
   - Spring Data JPA
   - H2
   - Spring Security
-#### `Front-end`
-  - Tymeleaf
-  - bootstrap
+
   
 #### `Tool`
   - IntelliJ IDEA
