@@ -34,6 +34,8 @@ https://www.erdcloud.com/d/MDhfb2Mioq6sPRoiG
 #### `네이밍컨벤션`
   - DB: 
   - Java
+#### `Git-flow 전략` 
+  - 참고: https://techblog.woowahan.com/2553/
   
 
 
