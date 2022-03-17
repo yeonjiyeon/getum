@@ -30,4 +30,10 @@
 ## 3. ERD 설계
 https://www.erdcloud.com/d/MDhfb2Mioq6sPRoiG
 
+## 4. 규칙
+#### `네이밍컨벤션`
+  - DB: 
+  - Java
+  
+
 
