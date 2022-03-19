@@ -35,7 +35,7 @@ https://www.erdcloud.com/d/MDhfb2Mioq6sPRoiG
 ## 4. 규칙
 #### `네이밍컨벤션`
   - DB: 
-  - Java
+  - Java: [Google Java Style Guide 번역](https://newwisdom.tistory.com/96)
 #### `Git-flow 전략` 
   - 참고: [우린 Git-flow를 사용하고 있어요](https://techblog.woowahan.com/2553/)
   
