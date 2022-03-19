@@ -44,7 +44,9 @@ https://www.erdcloud.com/d/MDhfb2Mioq6sPRoiG
   
 </br>
 
-## 5. 기능
+## 5. 전체 흐름
 
+## 6. 기능
+### 6.1. 로그인
 
 
