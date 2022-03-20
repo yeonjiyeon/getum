@@ -33,7 +33,7 @@ https://www.erdcloud.com/d/MDhfb2Mioq6sPRoiG
 </br>
 
 ## 4. 규칙
-#### `네이밍컨벤션`
+#### `네이밍컨벤션 및 코드 스타일`
   - DB: 
   - Java: [Google Java Style Guide 번역](https://newwisdom.tistory.com/96)
 #### `Git-flow 전략` 
