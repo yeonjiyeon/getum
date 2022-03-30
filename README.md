@@ -50,6 +50,6 @@ https://www.erdcloud.com/d/MDhfb2Mioq6sPRoiG
 
 ## 6. 기능
 
-### 6.1. 로그인
+### 6.1. 회원
 
 
