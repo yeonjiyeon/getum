@@ -12,7 +12,7 @@
 
 ## 2. 사용 기술
 #### `Back-end`
-  - Java 8
+  - Java 11
   - Spring Boot 2.6.3
   - Gradle
   - Spring Data JPA
