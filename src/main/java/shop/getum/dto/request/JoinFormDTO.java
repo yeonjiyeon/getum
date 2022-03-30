@@ -13,6 +13,7 @@ import javax.validation.constraints.Pattern;
 @Data
 @AllArgsConstructor
 public class JoinFormDTO {
+
     @NotEmpty(message = "이메일을 입력 해 주세요.")
     @Email(message = "이메일의 형식을 맞춰주세요.")
     private String email;//회원 이메일

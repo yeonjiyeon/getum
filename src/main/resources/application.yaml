@@ -1,7 +1,8 @@
 
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/getum
+#    url: jdbc:h2:tcp://localhost/~/getum
+    url: jdbc:h2:mem://localhost/~/getum
     username: sa
     password:
     driver-class-name: org.h2.Driver

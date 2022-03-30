@@ -1,7 +1,9 @@
-package shop.getum.domain;
+package shop.getum.domain.member;
 
+import javax.persistence.GeneratedValue;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import shop.getum.domain.common.Address;
@@ -13,12 +15,19 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Getter
 @Builder
+@EqualsAndHashCode(of = "id")
 public class Member extends BaseEntity {
+
     @Id
-    @Column(name = "member_email", nullable = false)
+    @GeneratedValue
+    @Column(name = "member_id")
+    private Long id;//회원 아이디
+
+    @Column(name = "member_email", unique = true)
     private String email;//회원 이메일
 
     @Column(name = "member_pw", nullable = false)
@@ -26,6 +35,15 @@ public class Member extends BaseEntity {
 
     @Column(name = "member_name", nullable = false)
     private String name;//회원이름
+
+    private boolean emailVerified;//이메일 인증 절차 위해 사용
+    
+    private String emailCheckToken;// 이메일 검증 토큰값
+
+    //알림 설정
+    private boolean orderByEmail;
+
+    private boolean orderByWeb;
 
     @Column(name = "member_tel", nullable = false)
     private String telephone;//회원전화번호
